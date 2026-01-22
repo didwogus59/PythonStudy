@@ -4,11 +4,10 @@
   let loading = false;
   let error = null;
 
-  function onFileChange(event) {
-    selectedFile = event.target.files[0];
-    resultImageUrl = null;
-    error = null;
-  }
+function onFileChange(event) {
+  selectedFile = event.target.files[0];  // 항상 최신 파일 참조
+  resultImageUrl = null;
+}
 
   async function uploadImage() {
     if (!selectedFile) {
